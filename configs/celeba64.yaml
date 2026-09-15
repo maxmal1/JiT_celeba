@@ -1,0 +1,42 @@
+name: celeba64
+out_dir: runs
+seed: 0
+
+# data
+img_size: 64
+n_val: 5000
+num_workers: 4
+
+model_args:
+  input_size: 64
+  patch_size: 16
+  in_channels: 3
+  hidden_size: 256
+  depth: 6
+  num_heads: 4
+  mlp_ratio: 4.0
+  bottleneck_dim: 256
+  num_classes: 1
+  in_context_len: 0
+  in_context_start: 0
+
+mu: 0.0
+sigma: 1.0
+noise_scale: 1.0
+t_min: 0.05
+ema_decay: 0.999
+sampling_method: heun
+num_sampling_steps: 50
+
+steps: 30000
+batch_size: 128
+lr: 2.0e-4
+weight_decay: 0.0
+warmup_steps: 1000
+grad_clip: 1.0
+
+log_every: 100
+val_every: 1000
+sample_every: 2500
+save_every: 2500
+n_samples: 64
