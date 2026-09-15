@@ -1,0 +1,10 @@
+# key packages are already installed into the base image env
+# these are extra
+
+ipykernel==7.3.0
+matplotlib==3.11.2
+tqdm==4.70.1
+einops==0.8.2
+tensorboard==2.21.0
+torchmetrics[image]==1.9.0
+gdown
